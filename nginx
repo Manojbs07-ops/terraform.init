@@ -1,0 +1,5 @@
+# docker_image.nginx will be created
+  + resource "docker_image" "nginx" { ... }
+
+  # docker_container.nginx_container will be created
+  + resource "docker_container" "nginx_container" { ... }
