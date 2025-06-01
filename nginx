@@ -1,5 +1,11 @@
-# docker_image.nginx will be created
-  + resource "docker_image" "nginx" { ... }
-
-  # docker_container.nginx_container will be created
-  + resource "docker_container" "nginx_container" { ... }
+# docker_container.nginx_container:
+resource "docker_container" "nginx_container" {
+  id         = "abc123"
+  image      = "nginx:latest"
+  name       = "nginx_terraform"
+  ports {
+    internal = 80
+    external = 8080
+  }
+  ...
+}
